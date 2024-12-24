@@ -8,8 +8,8 @@ Feature: Create a calendar event with a description
     Given the user logs in with username "<username>" and password "<password>"
     And the user hover over "Activities" and selects "Calendar Events" from the dropdown
     When the user clicks on the "Create Calendar Event" button
-    And the user types "<message>" into the "text" area
-    Then the "Description" field display "<message>"
+    And the user types "<message>" into the text area
+    Then the Description field display "<message>"
 
     Examples:
       | username        | password    | message            |

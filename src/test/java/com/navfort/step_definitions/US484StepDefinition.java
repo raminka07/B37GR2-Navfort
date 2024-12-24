@@ -51,8 +51,8 @@ public class US484StepDefinition {
 
 
     US484CreateEventPage createEventPage = new US484CreateEventPage();
-    @When("the user types {string} into the {string} area")
-    public void the_user_types_into_the_field(String msg, String txtBox) {
+    @When("the user types {string} into the text area")
+    public void the_user_types_into_the_field(String msg) {
         BrowserUtils.waitForVisibility(createEventPage.iframe,300);
         createEventPage.writeTxt(msg);
         BrowserUtils.sleep(3);
@@ -60,8 +60,8 @@ public class US484StepDefinition {
 
 
 
-    @Then("the {string} field display {string}")
-    public void the_field_display(String txtArea, String msg) {
+    @Then("the Description field display {string}")
+    public void the_field_display(String msg) {
 
         String actualText = createEventPage.displayText();
         Assert.assertEquals("Displayed text is different from what was writed",msg,actualText);
