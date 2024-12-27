@@ -1,12 +1,10 @@
-@pinbar
-Feature: As a user, I want to learn how to use the pinbar.
 
+Feature: As a user, I want to learn how to use the pinbar
+  US481GR23 PINBAR
 
   Background: User is already in the log in page
     Given the user is on the login page
 
-    #AC01TC01
-  @AC01TC01
   Scenario Outline:Verify that users see the text "How To Use Pinbar" and the instructional message after clicking
   the "Learn how to use this space" link on the homepage.
     Given the user logged in as "<userType>"
@@ -14,10 +12,10 @@ Feature: As a user, I want to learn how to use the pinbar.
     Then users see the "<text>"
     Then users see the instructional "<message>"
     Examples:
-      | userType      | text              | message                                                                                    |
-      | driver        | How To Use Pinbar | Use the pin icon on the right top corner of page to create fast access link in the pinbar. |
-      | store manager | How To Use Pinbar | Use the pin icon on the right top corner of page to create fast access link in the pinbar. |
-      | sales manager | How To Use Pinbar | Use the pin icon on the right top corner of page to create fast access link in the pinbar. |
+      | userType | text | message |
+  | driver        | How To Use Pinbar | Use the pin icon on the right top corner of page to create fast access link in the pinbar. |
+     | store manager | How To Use Pinbar | Use the pin icon on the right top corner of page to create fast access link in the pinbar. |
+     | sales manager | How To Use Pinbar | Use the pin icon on the right top corner of page to create fast access link in the pinbar. |
 
 
  #AC02TC01

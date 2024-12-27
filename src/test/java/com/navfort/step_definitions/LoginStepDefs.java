@@ -2,7 +2,13 @@ package com.navfort.step_definitions;
 
 import com.navfort.pages.LoginPage;
 import com.navfort.utilities.ConfigurationReader;
+import com.navfort.utilities.Driver;
 import io.cucumber.java.en.Given;
+import io.cucumber.java.en.Then;
+import io.cucumber.java.en.When;
+import org.openqa.selenium.support.ui.WebDriverWait;
+
+import java.time.Duration;
 
 public class LoginStepDefs {
 
@@ -36,10 +42,34 @@ public class LoginStepDefs {
     public void the_user_logged_in_with_username_as_and_password_as(String username, String password) {
       LoginPage loginPage=new LoginPage();
       loginPage.login(username,password);
+
+    }
+    @Given("user is on the login page")
+    public void user_is_on_the_login_page() {
+        WebDriverWait wait = new WebDriverWait(Driver.getDriver(), Duration.ofSeconds(10));
+    }
+    @When("user enters the store manager information")
+    public void user_enters_the_store_manager_information() {
+        LoginPage loginPage = new LoginPage();
+        loginPage.login("storemanager85","UserUser123");
+    }
+    @Then("user should be able to see {int} modules")
+    public void user_should_be_able_to_see_modules(Integer int8) {
+
+    }
+    @When("user enters the sales manager information")
+    public void userEntersTheSalesManagerInformation() {
+        LoginPage loginPage = new LoginPage();
+        loginPage.login("salesmanager101","UserUser123");
+    }
+    @When("user enters the driver information")
+    public void userEntersTheDriverInformation() {
+        LoginPage loginPage = new LoginPage();
+        loginPage.login("user1","UserUser123");
     }
 
+    @Then("user should be able to see {string} modules")
+    public void userShouldBeAbleToSeeModules(String arg4) {
 
-
-
-
+    }
 }

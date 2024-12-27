@@ -1,6 +1,7 @@
-@test
-Feature: Users should be able to login and can access to Vehicle Contracts page
-  B37GRP2-US478
+
+Feature: Users should be able to login
+  US481GR24 VEHICLE CONTRACTS
+  Users should be able to login and can access to Vehicle Contracts page
 
   Background: User is already in the log in page
     Given the user is on the login page

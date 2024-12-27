@@ -1,19 +1,14 @@
 package com.navfort.step_definitions;
 
-import com.navfort.pages.ForbiddenPage;
-import com.navfort.pages.LoginPage;
-import com.navfort.pages.VehicleContacts;
+import com.navfort.pages.US481VehicleContacts;
 import com.navfort.utilities.BrowserUtils;
-import com.navfort.utilities.Driver;
-import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 
+public class US481_VehicleContractsStepDefinitions {
 
-public class US478_VehicleContracts_StepDefs {
-
-    VehicleContacts VehicleContracts = new VehicleContacts();
-    LoginPage LoginPage = new LoginPage();
+    US481VehicleContacts VehicleContracts = new US481VehicleContacts();
+    //LoginPage LoginPage = new LoginPage();
 
   /*  @Given("user is on login page")
     public void userIsOnLoginPage() {
@@ -44,7 +39,7 @@ public class US478_VehicleContracts_StepDefs {
 
     @Then("user should be able to see URL {string}")
     public void user_should_be_able_to_see_url(String URL) {
-        BrowserUtils.verifyURL("https://qa.navfort.com/entity/Extend_Entity_VehicleContract");
+        BrowserUtils.verifyURLContains("https://qa.navfort.com/entity/Extend_Entity_VehicleContract");
         BrowserUtils.waitFor(10);
 
     }
@@ -56,28 +51,15 @@ public class US478_VehicleContracts_StepDefs {
 
     }
 
-    /* an attempt to click back to the vehicle contracts page automatically
-    ForbiddenPage forbiddenPage = new ForbiddenPage();
-  @Then("user should see the forbidden page and clicks on click button to go back")
-    public void userShouldSeeTheForbiddenPageAndClicksOnClickButtonToGoBack() {
-
-        BrowserUtils.verifyURL("https://qa.navfort.com/entity/Extend_Entity_VehicleContract");
-        //BrowserUtils.switchToWindow("403 - Forbidden");
-        forbiddenPage.Button.click();
-       // BrowserUtils.switchToWindow("home page");
-    }*/
-
     @Then("the app displays {string}")
     public void the_App_Displays(String message) {
 
 
         BrowserUtils.waitFor(2);// to return to the Vehicle contracts page manually by clicking the button"click to go back"
-        //BrowserUtils.verifyElementDisplayed(VehicleContracts.message);
-       // BrowserUtils.verifyElementDisplayed("You do not have permission to perform this action.");
+        BrowserUtils.verifyElementDisplayed(VehicleContracts.message);
+        // BrowserUtils.verifyElementDisplayed("You do not have permission to perform this action.");
 
-        VehicleContracts.message.isDisplayed();
+        //VehicleContracts.message.isDisplayed();
 
     }
-
-
 }
