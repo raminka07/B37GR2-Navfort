@@ -5,7 +5,7 @@ Feature: Users should be able to login and can access to Vehicle Contracts page
   Background: User is already in the log in page
     Given the user is on the login page
 
- @AC02TC01
+ @AC1TC02
   Scenario Outline: Verify that Store Managers and Sales Managers can access the Vehicle Contracts page
     Given the user logged in as "<userType>"
     When user clicks on Fleet
@@ -18,7 +18,7 @@ Feature: Users should be able to login and can access to Vehicle Contracts page
      | Sales manager |
 
 
- @AC01TC02
+ @AC2TC01
   Scenario: Verify that Drivers can NOT access the Vehicle Contracts page and the app displays “You do not have permission to perform this action.”
     Given the user logged in as "driver"
     When user clicks on Fleet
