@@ -3,19 +3,17 @@ package com.navfort.step_definitions;
 import com.navfort.pages.ManageFiltersPage;
 import com.navfort.utilities.BrowserUtils;
 import com.navfort.utilities.Driver;
-import io.cucumber.java.en.And;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import org.junit.Assert;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
-import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.Select;
 
 import java.util.List;
 
-public class ManageFiltersStepDefs {
+public class US488_ManageFiltersStepDefs {
     ManageFiltersPage manageFiltersPage=new ManageFiltersPage();
     @When("the user clicks the Campaigns link from the Marketing menu")
     public void theUserClicksTheCampaignsLinkFromTheMarketingMenu() {
