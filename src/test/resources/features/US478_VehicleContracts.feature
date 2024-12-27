@@ -6,7 +6,7 @@ Feature: Users should be able to login and can access to Vehicle Contracts page
     Given the user is on the login page
 
  @AC02TC01
-  Scenario Outline: Verify that StoreManager and Sales Manager can access the Vehicle Contracts page
+  Scenario Outline: Verify that Store Managers and Sales Managers can access the Vehicle Contracts page
     Given the user logged in as "<userType>"
     When user clicks on Fleet
     And user clicks on Vehicle Contracts
