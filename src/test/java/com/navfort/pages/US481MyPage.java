@@ -5,9 +5,9 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
-public class US481BasePage {
+public class US481MyPage extends BasePage{
 
-    public US481BasePage(){
+    public US481MyPage(){
         PageFactory.initElements(Driver.getDriver(),this);
     }
 

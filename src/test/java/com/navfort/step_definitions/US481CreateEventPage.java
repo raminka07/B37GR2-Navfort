@@ -1,7 +1,7 @@
 package com.navfort.step_definitions;
 
 import com.navfort.pages.US481ActivitiesPage;
-import com.navfort.pages.US481BasePage;
+import com.navfort.pages.US481MyPage;
 import com.navfort.pages.US481CalenderEventPage;
 import com.navfort.utilities.BrowserUtils;
 import com.navfort.utilities.Driver;
@@ -13,7 +13,7 @@ import org.openqa.selenium.interactions.Actions;
 
 public class US481CreateEventPage extends US481CalenderEventPage {
 
-    US481BasePage basePage = new US481BasePage();
+    US481MyPage basePage = new US481MyPage();
 
     @And("the user hover over {string} and selects {string} from the dropdown")
     public void theUserHoverOverAndSelectsFromTheDropdown(String modulebtn, String calendarEvent) {
