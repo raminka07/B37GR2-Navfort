@@ -1,21 +1,17 @@
 package com.navfort.step_definitions;
 
 import com.navfort.pages.BasePage;
-import com.navfort.pages.CalendarRepeatEveryPage;
+import com.navfort.pages.US483_CalendarRepeatEveryPage;
 import com.navfort.pages.LoginPage;
-import com.navfort.utilities.ConfigurationReader;
 import com.navfort.utilities.Driver;
 import io.cucumber.java.en.And;
-import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
-import io.cucumber.java.en.When;
-import io.cucumber.java.en_old.Ac;
 import org.junit.Assert;
 import org.openqa.selenium.interactions.Actions;
 
-public class ErrorCalendarRepeatBox_StepDefs extends BasePage{
+public class US483_ErrorCalendarRepeatBox_StepDefs extends BasePage{
     LoginPage loginPage = new LoginPage();
-    CalendarRepeatEveryPage calendarRepeatEveryPage = new CalendarRepeatEveryPage();
+    US483_CalendarRepeatEveryPage calendarRepeatEveryPage = new US483_CalendarRepeatEveryPage();
     Actions actions = new Actions(Driver.getDriver());
 
     @And("user clicks on {string} tab and {string} module")

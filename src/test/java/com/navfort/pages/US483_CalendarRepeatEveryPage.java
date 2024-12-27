@@ -5,8 +5,8 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
-public class CalendarRepeatEveryPage {
-    public CalendarRepeatEveryPage(){
+public class US483_CalendarRepeatEveryPage {
+    public US483_CalendarRepeatEveryPage(){
         PageFactory.initElements(Driver.getDriver(), this);
     }
 
