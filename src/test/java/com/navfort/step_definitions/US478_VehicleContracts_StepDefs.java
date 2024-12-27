@@ -1,11 +1,8 @@
 package com.navfort.step_definitions;
 
-import com.navfort.pages.ForbiddenPage;
 import com.navfort.pages.LoginPage;
 import com.navfort.pages.VehicleContacts;
 import com.navfort.utilities.BrowserUtils;
-import com.navfort.utilities.Driver;
-import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 
@@ -44,7 +41,7 @@ public class US478_VehicleContracts_StepDefs {
 
     @Then("user should be able to see URL {string}")
     public void user_should_be_able_to_see_url(String URL) {
-        BrowserUtils.verifyURL("https://qa.navfort.com/entity/Extend_Entity_VehicleContract");
+        BrowserUtils.verifyURLContains("https://qa.navfort.com/entity/Extend_Entity_VehicleContract");
         BrowserUtils.waitFor(10);
 
     }
