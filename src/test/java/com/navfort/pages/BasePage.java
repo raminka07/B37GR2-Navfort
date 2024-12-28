@@ -69,6 +69,9 @@ public abstract class BasePage {
 
     }
 
+    @FindBy(partialLinkText = "Activities")
+    public WebElement activeties;
+
 
 
     /**
