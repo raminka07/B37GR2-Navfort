@@ -1,13 +1,13 @@
 package com.navfort.step_definitions;
 
-import com.navfort.pages.US481VehicleContacts;
+import com.navfort.pages.US481_VehicleContacts;
 import com.navfort.utilities.BrowserUtils;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 
 public class US481_VehicleContractsStepDefinitions {
 
-    US481VehicleContacts VehicleContracts = new US481VehicleContacts();
+    US481_VehicleContacts VehicleContracts = new US481_VehicleContacts();
     //LoginPage LoginPage = new LoginPage();
 
   /*  @Given("user is on login page")

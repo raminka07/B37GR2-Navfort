@@ -5,8 +5,8 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
-public class US481PinbarPage {
-    public US481PinbarPage() {
+public class US481_PinbarPage {
+    public US481_PinbarPage() {
         PageFactory.initElements(Driver.getDriver(),this);
     }
 

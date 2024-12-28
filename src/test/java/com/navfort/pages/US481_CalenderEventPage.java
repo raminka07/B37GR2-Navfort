@@ -5,9 +5,9 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
-public class US481CalenderEventPage {
+public class US481_CalenderEventPage {
 
-    public US481CalenderEventPage(){
+    public US481_CalenderEventPage(){
         PageFactory.initElements(Driver.getDriver(),this);
     }
 

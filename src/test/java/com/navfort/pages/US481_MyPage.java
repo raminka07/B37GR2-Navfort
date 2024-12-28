@@ -5,12 +5,18 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
-public class US481ActivitiesPage {
-    public void US481ActivitiesPage (){
+public class US481_MyPage extends BasePage{
+
+    public US481_MyPage(){
         PageFactory.initElements(Driver.getDriver(),this);
     }
 
-    @FindBy(xpath = "//a[@title='Create Calendar event']")
-    public WebElement createCalendarEvantBtn;
+    @FindBy(partialLinkText = "Activities")
+    public WebElement activities;
+
+    @FindBy(xpath = "//span[.='Calendar Events']")
+    public WebElement calendarEvent;
+
+
 
 }
