@@ -18,14 +18,8 @@ public class US484_CalendarEventDescriptionStepDefinition  {
 
 
     @And("the user hover over {string} and selects {string} from the dropdown")
-    public void theUserHoverOverAndSelectsFromTheDropdown(String modulebtn, String calendarEvent) {
-        BrowserUtils.waitForVisibility(createCalendarEventPage.activeties,500);
-        Actions actions = new Actions(Driver.getDriver());
-        actions.moveToElement(createCalendarEventPage.activeties).perform();
-        BrowserUtils.sleep(3);
-        actions.moveToElement(calendarEventPage.calendarEvent).click().perform();
-
-
+    public void theUserHoverOverAndSelectsFromTheDropdown(String tab, String module) {
+        createCalendarEventPage.navigateToModule(tab,module);
     }
 
 

@@ -54,4 +54,10 @@ public class CreateCalendarEventPage extends BasePage {
     @FindBy(xpath = "(//span[.='The value have not to be more than 99.'])[3]")
     public WebElement moreThanErrorMessage;
 
+    @FindBy(css = ".validation-failed")
+    public WebElement errorMessage;
+
+
+
+
 }
