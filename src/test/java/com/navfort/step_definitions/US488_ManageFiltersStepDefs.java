@@ -15,6 +15,7 @@ import java.util.List;
 
 public class US488_ManageFiltersStepDefs {
     ManageFiltersPage manageFiltersPage=new ManageFiltersPage();
+
     @When("the user clicks the Campaigns link from the Marketing menu")
     public void theUserClicksTheCampaignsLinkFromTheMarketingMenu() {
         BrowserUtils.waitForVisibility(manageFiltersPage.marketingMenu,10);
@@ -34,6 +35,7 @@ public class US488_ManageFiltersStepDefs {
             manageFiltersPage.filtersMark.click();
         }
     }
+
 
     @Then("Verify that Store and Sales managers see all 5 filter options as checked by default.")
     public void verify_that_store_and_sales_managers_see_all_filter_options_as_checked_by_default() {
