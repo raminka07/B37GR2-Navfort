@@ -10,24 +10,21 @@ import io.cucumber.java.en.When;
 import org.junit.Assert;
 import org.openqa.selenium.interactions.Actions;
 
-public class US484_CalendarEventDescriptionStepDefinition {
+public class US484_CalendarEventDescriptionStepDefinition  {
 
-    US484BasePage basePage = new US484BasePage();
+
+    CreateCalendarEventPage createCalendarEventPage = new CreateCalendarEventPage();
+    CalendarEventPage calendarEventPage = new CalendarEventPage();
+
 
     @And("the user hover over {string} and selects {string} from the dropdown")
-    public void theUserHoverOverAndSelectsFromTheDropdown(String modulebtn, String calendarEvent) {
-        BrowserUtils.waitForVisibility(basePage.activeties,500);
-        Actions actions = new Actions(Driver.getDriver());
-        actions.moveToElement(basePage.activeties).perform();
-        BrowserUtils.sleep(3);
-        actions.moveToElement(basePage.calendarEvent).click().perform();
-
-
+    public void theUserHoverOverAndSelectsFromTheDropdown(String tab, String module) {
+        createCalendarEventPage.navigateToModule(tab,module);
     }
 
 
 
-    US484ActivitiesPage activitiesPage = new US484ActivitiesPage();
+    CalendarEventPage activitiesPage = new CalendarEventPage();
 
     @When("the user clicks on the {string} button")
     public void the_user_clicks_on_the_button(String createCalendarEvent) {
@@ -36,7 +33,7 @@ public class US484_CalendarEventDescriptionStepDefinition {
     }
 
 
-    US484CreateEventPage createEventPage = new US484CreateEventPage();
+    CreateCalendarEventPage createEventPage = new CreateCalendarEventPage();
 
     @When("the user types {string} into the text area")
     public void the_user_types_into_the_field(String msg) {
