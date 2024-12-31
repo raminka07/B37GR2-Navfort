@@ -1,6 +1,6 @@
 package com.navfort.step_definitions;
 
-import com.navfort.pages.US481_VehiclesModelPage;
+import com.navfort.pages.US479_VehiclesModelPage;
 import com.navfort.utilities.BrowserUtils;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
@@ -8,9 +8,9 @@ import org.junit.Assert;
 
 import java.util.List;
 
-public class US481_VehiclesModel_StepDefinition {
+public class US479_VehiclesModel_StepDefinition {
 
-    US481_VehiclesModelPage vehiclesModelPages = new US481_VehiclesModelPage();
+    US479_VehiclesModelPage vehiclesModelPages = new US479_VehiclesModelPage();
 
     @Given("the user relocated the Fleet dropdown")
     public void the_user_relocated_the_fleet_dropdown() {
