@@ -1,4 +1,4 @@
-@NavfortCalenderDescription
+@wip
 Feature: Create a calendar event with a description
   As a user, I want to type into the Description field when I create a calendar event.
 
