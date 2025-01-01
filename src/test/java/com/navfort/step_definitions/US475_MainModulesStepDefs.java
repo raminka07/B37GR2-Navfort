@@ -1,6 +1,6 @@
 package com.navfort.step_definitions;
 
-import com.navfort.pages.MainModulesPage;
+import com.navfort.pages.US475_MainModulesPage;
 import com.navfort.utilities.Driver;
 import io.cucumber.java.en.Then;
 import org.junit.Assert;
@@ -11,7 +11,7 @@ import java.time.Duration;
 
 public class US475_MainModulesStepDefs {
 
-    MainModulesPage mainModulesPage = new MainModulesPage();
+    US475_MainModulesPage mainModulesPage = new US475_MainModulesPage();
 
 
     @Then("user sees four modules: {string}, {string}, {string}, {string}")
@@ -32,11 +32,6 @@ public class US475_MainModulesStepDefs {
         Assert.assertEquals(expectedModule3, actualModule3);
         Assert.assertEquals(expectedModule4, actualModule4);
     }
-
-
-
-
-
 
 
     @Then("user sees eight modules: {string}, {string}, {string}, {string}, {string}, {string}, {string}, {string}")

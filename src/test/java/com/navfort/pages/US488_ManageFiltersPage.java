@@ -5,9 +5,9 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
-public class ManageFiltersPage {
+public class US488_ManageFiltersPage {
 
-    public ManageFiltersPage() {
+    public US488_ManageFiltersPage() {
         PageFactory.initElements(Driver.getDriver(), this);
     }
 

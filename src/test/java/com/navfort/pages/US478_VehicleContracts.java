@@ -5,9 +5,9 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
-public class VehicleContacts {
+public class US478_VehicleContracts {
 
-    public VehicleContacts() {
+    public US478_VehicleContracts() {
         PageFactory.initElements(Driver.getDriver(), this);
     }
 

@@ -1,13 +1,13 @@
 package com.navfort.step_definitions;
 
-import com.navfort.pages.PinbarPage;
+import com.navfort.pages.US477_PinbarPage;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import org.junit.Assert;
 
 public class US477_PinbarStepDefinitions {
 
-    PinbarPage pinbarPage = new PinbarPage();
+    US477_PinbarPage pinbarPage = new US477_PinbarPage();
     @When("user click the “Learn how to use this space” link")
     public void user_click_the_learn_how_to_use_this_space_link() {
         pinbarPage.pinbarLink.click();

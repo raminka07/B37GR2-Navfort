@@ -1,6 +1,6 @@
 
 Feature: Users should be able to login
-  US481GR21 LOGIN
+  US481 LOGIN
   As a user: I should be able to login with correct credentials to the different Accounts. and dashboard
   accounts are: driver, sales manager, store manager
 

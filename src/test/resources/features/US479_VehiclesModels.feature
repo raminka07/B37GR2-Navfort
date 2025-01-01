@@ -1,12 +1,12 @@
 
 Feature: Users should be able to login
 
-Feature: Users should be able to login
+  US479
 
   Background: User is already in the log in page
     Given the user is on the login page
 
-  @VMtest
+
   Scenario Outline: User should be able to view columns on the Vehicles model page
     Given the user logged in as "<userType>"
     Given the user relocated the Fleet dropdown
@@ -22,7 +22,7 @@ Feature: Users should be able to login
       | Store manager |
       | Sales manager |
 
-  @VMtest
+
   Scenario: User should be able to view columns on the Vehicles model page
     Given the user logged in as "driver"
     Given the user relocated the Fleet dropdown

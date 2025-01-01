@@ -1,6 +1,6 @@
 package com.navfort.step_definitions;
 
-import com.navfort.pages.ManageFiltersPage;
+import com.navfort.pages.US488_ManageFiltersPage;
 import com.navfort.utilities.BrowserUtils;
 import com.navfort.utilities.Driver;
 import io.cucumber.java.en.Then;
@@ -15,7 +15,7 @@ import java.util.List;
 
 public class US488_ManageFiltersStepDefinition {
 
-    ManageFiltersPage manageFiltersPage = new ManageFiltersPage();
+    US488_ManageFiltersPage manageFiltersPage = new US488_ManageFiltersPage();
 
     @When("the user clicks the Campaigns link from the Marketing menu")
     public void theUserClicksTheCampaignsLinkFromTheMarketingMenu() {

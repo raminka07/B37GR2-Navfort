@@ -1,6 +1,6 @@
 package com.navfort.step_definitions;
 
-import com.navfort.pages.VehicleContacts;
+import com.navfort.pages.US478_VehicleContracts;
 import com.navfort.utilities.BrowserUtils;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
@@ -9,7 +9,7 @@ public class US478_VehicleContractsStepDefinitions {
 
 
 
-    VehicleContacts vc = new VehicleContacts();
+    US478_VehicleContracts vc = new US478_VehicleContracts();
 
     @When("user navigates to Fleet and clicks on Vehicle Contracts")
     public void userNavigatesToFleetAndClicksOnVehicleContracts() {

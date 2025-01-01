@@ -1,8 +1,11 @@
 
-@US483
+
 Feature: Calendar Repeat Every input box functionality
   Agile story: As a user, I should see error messages
   when I enter an invalid integer number into the calendar Repeat Every input box.
+
+  US483
+
 
   Background: user is already logged in the page
     Given the user is on the login page
