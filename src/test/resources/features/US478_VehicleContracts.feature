@@ -1,4 +1,4 @@
-@test
+@wip
 Feature: Users should be able to login and can access to Vehicle Contracts page
   B37GRP2-US478
 
