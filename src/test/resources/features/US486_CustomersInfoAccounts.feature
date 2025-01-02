@@ -1,3 +1,4 @@
+@wip
 Feature: Filter Customers' info on the Accounts page
   Agile story: As a user, i want to filter customers' info on the Account page
 
