@@ -1,4 +1,4 @@
-@US483
+@wip
 Feature: Calendar Repeat Every input box functionality
   Agile story: As a user, I should see error messages
   when I enter an invalid integer number into the calendar Repeat Every input box.
@@ -6,7 +6,7 @@ Feature: Calendar Repeat Every input box functionality
   Background: user is already logged in the page
     Given the user is on the login page
 
-
+  @US483
   Scenario Outline: Repeat Every input box invalid input
     Given the user logged in as "<userType>"
     And user clicks on "Activities" tab and "Calendar Events" module
