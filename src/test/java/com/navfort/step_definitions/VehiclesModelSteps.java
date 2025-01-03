@@ -1,18 +1,16 @@
 package com.navfort.step_definitions;
 
-import com.navfort.pages.US479_VehiclesModelPages;
+import com.navfort.pages.VehiclesModelPages;
 import com.navfort.utilities.BrowserUtils;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import org.junit.Assert;
-import org.openqa.selenium.By;
-import org.openqa.selenium.WebElement;
 
 import java.util.List;
 
-public class US479_VehiclesModelSteps {
+public class VehiclesModelSteps {
 
-    US479_VehiclesModelPages vehiclesModelPages = new US479_VehiclesModelPages();
+    VehiclesModelPages vehiclesModelPages = new VehiclesModelPages();
 
     @Given("the user relocated the Fleet dropdown")
     public void the_user_relocated_the_fleet_dropdown() {
@@ -30,12 +28,13 @@ public class US479_VehiclesModelSteps {
 
         List<String> actualVehicleModel = BrowserUtils.getElementsText(vehiclesModelPages.vehiclesModelList);
 
-
         Assert.assertEquals(expectedVehiclesModel, actualVehicleModel);
     }
     @Then("you should get a message {string}")
     public void you_should_get_a_message(String expectedMessage) {
+
             String actualMessage = vehiclesModelPages.noPermission.getText();
+
             Assert.assertEquals(expectedMessage, actualMessage);
         }
 
