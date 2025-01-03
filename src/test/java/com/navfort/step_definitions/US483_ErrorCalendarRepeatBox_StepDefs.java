@@ -9,6 +9,10 @@ import io.cucumber.java.en.Then;
 import org.junit.Assert;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.interactions.Actions;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
+
+import java.time.Duration;
 
 public class US483_ErrorCalendarRepeatBox_StepDefs {
     Actions actions = new Actions(Driver.getDriver());
@@ -24,6 +28,11 @@ public class US483_ErrorCalendarRepeatBox_StepDefs {
     @And("user clicks on Create Calendar event button")
     public void userClicksOnCreateCalendarEventButton() {
         calendarEventPage.createCalendarEvantBtn.click();
+        WebDriverWait wait = new WebDriverWait(Driver.getDriver(), Duration.ofSeconds(10));
+        wait.until(ExpectedConditions.elementToBeClickable(calendarEventPage.createCalendarEvantBtn));
+        //JavascriptExecutor js = (JavascriptExecutor) Driver.getDriver();
+        //js.executeScript("arguments[0].click();", createCalendarEventPage.repeatCheckBox);
+        //BrowserUtils.sleep(10);
     }
 
     @And("user checks repeat every checkbox")
