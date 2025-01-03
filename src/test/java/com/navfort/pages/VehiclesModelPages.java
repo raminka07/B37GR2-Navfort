@@ -21,10 +21,10 @@ public class VehiclesModelPages {
     public WebElement vehiclesModel;
 
 
-    @FindBy(xpath = "//td[@data-column-label='Model Name']")
+    @FindBy(xpath = "//span[contains(@class, 'grid-header-cell__label')]")
     public List<WebElement> vehiclesModelList;
 
-@FindBy(xpath = " //div[@class='message' and text()='You do not have permission to perform this action.']")
+@FindBy(xpath = "//div[text()='You do not have permission to perform this action.']")
     public WebElement noPermission;
 
 
