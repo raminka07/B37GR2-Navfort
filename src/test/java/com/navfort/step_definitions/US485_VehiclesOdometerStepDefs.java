@@ -47,13 +47,11 @@ public class US485_VehiclesOdometerStepDefs extends BasePage {
     public void theDefaultPageNumberShouldBe(String number) {
 
         Assert.assertEquals(number, vehiclesOdometerPage.defaultPage.getAttribute("value"));
-
     }
 
     @Then("the default View Per Page should be {string}")
     public void theDefaultViewPerPageShouldBe(String number) {
 
         Assert.assertEquals(number, vehiclesOdometerPage.viewPage.getText());
-
     }
 }

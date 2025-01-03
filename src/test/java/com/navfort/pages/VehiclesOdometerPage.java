@@ -22,7 +22,5 @@ public class VehiclesOdometerPage {
     @FindBy(xpath = "//button[@class='btn dropdown-toggle ']")
     public WebElement viewPage;
 
-
-
 }
 
