@@ -1,4 +1,3 @@
-@Abdelhak
 Feature: View Car Odometer Info
   Agile story: As a user, I want to view car odometer info on the Vehicles Odometer page.
 
