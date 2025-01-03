@@ -26,23 +26,6 @@ public class US485_VehiclesOdometerStepDefs extends BasePage {
     }
 
 
-//    @And("I click on the Vehicle Odometer")
-//    public void iClickOnTheVehicleOdometerModule() {
-
-    /// /        vehiclesOdometerPage.fleetLocation.click();
-    /// /        BrowserUtils.waitFor(2);
-    /// /        vehiclesOdometerPage.vehicleOdometer.click();
-//        navigateToModule();
-//
-//    }
-
-
-//    @And("I click on the Vehicle Odometer as a driver")
-//    public void iNavigateToTheVehicleOdometerModuleAsADriver() {
-//        vehiclesOdometerPage.DriverFleet.click();
-//        vehiclesOdometerPage.DriverVehicleOdo.click();
-//    }
-
     @When("user enter the username {string} and password {string}")
     public void userEnterTheUsernameAndPassword(String username, String password) {
         loginPage.login(username, password);
