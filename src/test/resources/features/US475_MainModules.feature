@@ -2,7 +2,7 @@
 Feature: main module visibility
 
 US475
-  @vDriver
+  @Driver
   Scenario: As a driver, when I am logged in I should be able to see 4 module names-
   Fleet, Customers, Activities, System
 

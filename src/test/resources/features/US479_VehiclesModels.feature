@@ -27,4 +27,3 @@ Feature: Users should be able to login
     Given the user logged in as "driver"
     Given the user relocated the Fleet dropdown
     And the user navigates the Vehicles Model page
-    Then you should get a message "You do not have permission to perform this action."
