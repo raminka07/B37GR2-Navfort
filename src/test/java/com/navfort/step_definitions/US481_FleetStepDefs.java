@@ -6,12 +6,14 @@ import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import org.junit.Assert;
 
-public class US481_FleetStepDefs extends US481_VehiclePage{
+public class US481_FleetStepDefs{
 
     US481_VehiclePage vehiclesPage = new US481_VehiclePage();
 
     @Given("the user is on the vehicles page")
     public void the_user_is_on_the_vehicles_page() {
+        vehiclesPage.navigateToVehiclesPage();
+        //Driver.getDriver().get("https://qa.navfort.com");
 
 
     }
