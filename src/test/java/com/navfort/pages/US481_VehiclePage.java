@@ -38,7 +38,7 @@ public class US481_VehiclePage extends BasePage{
     }
     //Navigate to the Vehicle page
     public void navigateToVehiclesPage() {
-        driver.get("https://qa.vytrack.com/entity/Extend_Entity_Carreservation");
+        driver.get("https://qa.transmuda.com/entity/Extend_Entity_Carreservation");
     }
     // verify all checkboxes are unchecked
     public boolean areAllCheckboxesUnchecked(){
