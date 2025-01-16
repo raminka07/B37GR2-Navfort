@@ -3,69 +3,41 @@ import com.navfort.pages.MainModulesPage;
 import com.navfort.utilities.Driver;
 import io.cucumber.java.en.Then;
 import org.junit.Assert;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
-
 import java.time.Duration;
-
+import java.util.List;
+import java.util.Arrays;
 
 public class US475_MainModulesStepDefs {
+    private final MainModulesPage mainModulesPage = new MainModulesPage();
+    private final WebDriverWait wait = new WebDriverWait(Driver.getDriver(), Duration.ofSeconds(10));
 
-    MainModulesPage mainModulesPage = new MainModulesPage();
-
+    private void verifyModules(List<String> expectedModules, List<WebElement> actualElements) {
+        wait.until(ExpectedConditions.visibilityOf(actualElements.get(0)));
+        for (int i = 0; i < expectedModules.size(); i++) {
+            Assert.assertEquals(expectedModules.get(i), actualElements.get(i).getText());
+        }
+    }
 
     @Then("user sees four modules: {string}, {string}, {string}, {string}")
-    public void user_sees_modules(String expectedModule1, String expectedModule2, String expectedModule3, String expectedModule4) {
-
-        //BrowserUtils.waitForVisibility(mainModulesPage.fleetBtn, 10);
-
-        WebDriverWait wait = new WebDriverWait( Driver.getDriver(), Duration.ofSeconds(10) );
-        wait.until(ExpectedConditions.visibilityOf(mainModulesPage.fleetBtn));
-
-        String actualModule1 = mainModulesPage.fleetBtn.getText();
-        String actualModule2 = mainModulesPage.customersBtn.getText();
-        String actualModule3 = mainModulesPage.activitiesBtn.getText();
-        String actualModule4 = mainModulesPage.systemBtn.getText();
-
-        Assert.assertEquals(expectedModule1, actualModule1);
-        Assert.assertEquals(expectedModule2, actualModule2);
-        Assert.assertEquals(expectedModule3, actualModule3);
-        Assert.assertEquals(expectedModule4, actualModule4);
+    public void user_sees_modules(String m1, String m2, String m3, String m4) {
+        verifyModules(
+                Arrays.asList(m1, m2, m3, m4),
+                Arrays.asList(mainModulesPage.fleetBtn, mainModulesPage.customersBtn,
+                        mainModulesPage.activitiesBtn, mainModulesPage.systemBtn)
+        );
     }
-
-
-
-
-
-
 
     @Then("user sees eight modules: {string}, {string}, {string}, {string}, {string}, {string}, {string}, {string}")
-    public void user_sees_modules(String expectedModule1, String expectedModule2, String expectedModule3,
-                                  String expectedModule4, String expectedModule5, String expectedModule6,
-                                  String expectedModule7, String expectedModule8) {
-
-        WebDriverWait wait = new WebDriverWait( Driver.getDriver(), Duration.ofSeconds(10) );
-        wait.until(ExpectedConditions.visibilityOf(mainModulesPage.dashboardBtn));
-
-        String actualModule1 = mainModulesPage.dashboardBtn.getText();
-        String actualModule2 = mainModulesPage.fleetBtn.getText();
-        String actualModule3 = mainModulesPage.customersBtn.getText();
-        String actualModule4 = mainModulesPage.salesBtn.getText();
-        String actualModule5 = mainModulesPage.activitiesBtn.getText();
-        String actualModule6 = mainModulesPage.marketingBtn.getText();
-        String actualModule7 = mainModulesPage.reportsBtn.getText();
-        String actualModule8 = mainModulesPage.systemBtn.getText();
-
-
-        Assert.assertEquals(expectedModule1, actualModule1);
-        Assert.assertEquals(expectedModule2, actualModule2);
-        Assert.assertEquals(expectedModule3, actualModule3);
-        Assert.assertEquals(expectedModule4, actualModule4);
-        Assert.assertEquals(expectedModule5, actualModule5);
-        Assert.assertEquals(expectedModule6, actualModule6);
-        Assert.assertEquals(expectedModule7, actualModule7);
-        Assert.assertEquals(expectedModule8, actualModule8);
+    public void user_sees_modules(String m1, String m2, String m3, String m4, String m5, String m6, String m7, String m8) {
+        verifyModules(
+                Arrays.asList(m1, m2, m3, m4, m5, m6, m7, m8),
+                Arrays.asList(mainModulesPage.dashboardBtn, mainModulesPage.fleetBtn,
+                        mainModulesPage.customersBtn, mainModulesPage.salesBtn,
+                        mainModulesPage.activitiesBtn, mainModulesPage.marketingBtn,
+                        mainModulesPage.reportsBtn, mainModulesPage.systemBtn)
+        );
     }
-
-
 }
