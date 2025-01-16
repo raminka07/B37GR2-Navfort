@@ -10,10 +10,16 @@ Feature: Users should be able to login
     Given the user relocated the Fleet dropdown
      And the user navigates the Vehicles Model page
     Then the user should see the fallowing vehicle models:
-      | Model S |
-      | Enzo    |
-      | Mazda   |
-      | Rouge   |
+      | MODEL NAME               |
+      | MAKE                     |
+      | CAN BE REQUESTED         |
+      | CVVI                     |
+      | CO2 FEE (/MONTH)         |
+      | COST (DEPRECIATED)       |
+      | TOTAL COST (DEPRECIATED) |
+      | CO2 EMISSIONS            |
+      | FUEL TYPE                |
+      | VENDORS                  |
 
     Examples:
       | userType      |
