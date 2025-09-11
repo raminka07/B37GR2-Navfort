@@ -485,4 +485,11 @@ public class             BrowserUtils {
     }
 
 
+    public static void hoverAndClick(WebElement car) {
+
+    }
+
+    public static List<String> getElementsTextWithAttribute(String title, List<WebElement> listIcon) {
+        return null;
+    }
 }

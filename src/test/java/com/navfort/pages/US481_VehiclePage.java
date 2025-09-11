@@ -1,79 +1,70 @@
 package com.navfort.pages;
 
-import org.openqa.selenium.WebDriver;
+import com.navfort.utilities.BrowserUtils;
+import com.navfort.utilities.Driver;
+import org.junit.Assert;
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
-import org.openqa.selenium.support.PageFactory;
 
 import java.util.List;
+import java.util.Random;
 
 public class US481_VehiclePage extends BasePage{
 
-  WebDriver driver;
+    @FindBy(xpath = "//ul[@class='dropdown-menu dropdown-menu__action-cell launchers-dropdown-menu detach dropdown-menu__floating']//*[@class='launcher-item']//a")
+    public List<WebElement> list_Icon;
 
-    @FindBy(xpath = "//table[@class='grid']//input[@type='checkbox']")
-    public List<WebElement> checkboxes;
 
-   @FindBy(xpath = "//table[@class='grid']//input[@type=checkbox'][1]")
-    public WebElement selectAllCheckbox;
+    @FindBy(xpath = "//tbody//input[@type='checkbox']")
+    public List<WebElement> list_checkbox;
 
-    @FindBy(id="prependedInput")
-    public WebElement userName;
+    @FindBy(xpath = "(//table//th//input[@type='checkbox'])[1]")
+    public WebElement check_all;
 
-    @FindBy(id="prependedInput2")
-    public WebElement password;
 
-    @FindBy(name = "_submit")
-    public WebElement submit;
+    public void checkThreeDots(List<String> expectedOptions) {
 
-    public void Login(String userNameStr, String passwordStr){
-        userName.sendKeys(userNameStr);
-        password.sendKeys(passwordStr);
-        submit.click();
+        Random random = new Random();
+        int i = random.nextInt(10);
+        System.out.println("i = " + i);
+
+        String locator = "(//div[@class='dropdown']//*[text()='...'])[" + (i + 1) + "]";
+        WebElement eachThreeDot = Driver.getDriver().findElement(By.xpath(locator));
+        BrowserUtils.hover(eachThreeDot);
+
+        List<String> actualOptions = BrowserUtils.getElementsTextWithAttribute("title", list_Icon);
+
+        Assert.assertEquals(expectedOptions, actualOptions);
+
     }
 
+    public void checkAllCheckboxes(String isChecked) {
 
-    public US481_VehiclePage() {
-        PageFactory.initElements(driver, this);
-    }
-    //Navigate to the Vehicle page
-    public void navigateToVehiclesPage() {
-        driver.get("https://qa.transmuda.com/entity/Extend_Entity_Carreservation");
-    }
-    // verify all checkboxes are unchecked
-    public boolean areAllCheckboxesUnchecked(){
-        for(WebElement checkbox : checkboxes){
-            if (checkbox.isSelected()){
-                return  false;
-            }
+        boolean res = isChecked.equals("unchecked") ? false : true;
+
+        System.out.println("list_checkbox.size() = " + list_checkbox.size());
+
+        for (WebElement checkbox : new US481_VehiclePage().list_checkbox) {
+            BrowserUtils.hover(checkbox);
+            Assert.assertEquals(res, checkbox.isSelected());
         }
-        return true;
+
     }
-    // Select the "Select All" checkbox
-    public void setSelectAllCheckbox(){
-        if(!selectAllCheckbox.isSelected()){
-            selectAllCheckbox.click();
-        }
+
+
+    public void selectCar(int row) {
+        WebElement car = list_checkbox.get(row - 1);
+        BrowserUtils.hoverAndClick(car);
+
     }
-    //Verify all checkboxes are selected
-    public boolean areAllCarsSelected(){
-        for (WebElement checkbox : checkboxes){
-            if (!checkbox.isSelected()){
-                return false;
-            }
-        }
-        return true;
+
+    public void verifyCarIsSelected(int row,String isChecked) {
+        boolean res = isChecked.equals("unchecked") ? false : true;
+
+        WebElement car = list_checkbox.get(row - 1);
+        Assert.assertEquals(res,car.isSelected());
+
     }
-    // Select a specific car by index
-    public void selectCarByIndex(int index) {
-        WebElement checkbox = checkboxes.get(index - 1); // Adjust for zero - based index
-        if (!checkbox.isSelected()){
-            checkbox.click();
-        }
-    }
-    // Verify a specific car is selected
-    public boolean isSpecificCarSelected (int index) {
-        WebElement checkbox = checkboxes.get(index - 1); // Adjust for zero based index
-        return checkbox.isSelected();
-    }
+
 }

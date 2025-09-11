@@ -1,20 +1,17 @@
 
-  Feature: Fleet Vehicle Management
-    User is a login page
-    Background:
-      Given the user is on the vehicles page
+Feature: As a user (Sales and Store manager), I should be able to select any vehicle from the Vehicles page
 
-    @fleet
-      Scenario: Verify checkboxes are unchecked by default
-       # Given the user is on the vehicles page
-        Then all checkboxes should be unchecked
 
-      Scenario: verify selecting the first checkbox selects all cars
-       # Given the user is on the vehicles page
-        When the user selects the first checkbox
-        Then all cars should be selected
+  Background: User is already in the log in page
+    Given the user is on the login page
 
-       Scenario: Verify users can select any car
-        # Given the user is on the vehicles page
-         When the user selects a specific car with index 3
-         Then only the checkbox for the selected car should be checked
+
+  Scenario Outline: Verify that once the <userType> launch on the Vehicles page, the users can see all the checkboxes
+  as unchecked.
+    When the user logged in as "<userType>"
+    When the user sees "Fleet" to "Vehicle"
+    Then the user should be able to see all the checkboxes as "unchecked"
+    Examples:
+      | userType      |
+      | Store Manager |
+      | Sales Manager |
